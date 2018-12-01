@@ -36,7 +36,7 @@ pipeline {
     stage('clone repo') {
       steps {
         script {
-          git url: 'https://github.com/torstenatgithub/time-service.git'
+          git url: 'https://github.com/mberndtgen/time-service.git'
         }
       }
     }
