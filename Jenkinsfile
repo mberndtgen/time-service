@@ -62,7 +62,7 @@ pipeline {
         script {
           openshift.withCluster() {
             openshift.withProject() {
-              def models = openshift.process("openshift//appuio/s2i-gradle-java", "--param-file=openshift/template-parameters.txt")
+              def models = openshift.process("openshift//ergo-openjdk18-binary-s2i", "--param-file=openshift/template-parameters.txt")
               def created = openshift.apply(models)
               //openshift.apply("-l=app=time-service", "--dry-run=true", "-f ./openshift")
               //openshift.apply("-l=app=time-service", "--dry-run=false", "-f ./openshift")
